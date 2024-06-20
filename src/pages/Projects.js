@@ -3,9 +3,9 @@ import React from "react";
 const Projects = () => {
     return (
         <section className="fullScreen projectsPage">
-            <div className="creativityText">
-                <span className="creativityTextWhite">with a passion </span>for art.
-            </div>            
+            // Using Genetic Algorithm for mdoel feature selection
+            // An industrial scale robot for handling machinery and tools
+            // Open source tools nerdtree, ciph
         </section>
     )
 }

@@ -19,8 +19,13 @@ const Footer = () => {
                     <p className="footerDevName">Kavin Bharathi</p>
                     <p className="footerText">fullstack + AI&ML developer / designer / tryhard</p>
                     <div className="footerSocials">
-                        <img className="footerIcons" src={GithubIcon} alt="Icons" />
-                        <img className="footerIcons" src={LinkedinIcon} alt="Icons "/>
+                        <a href="https://github.com/kavinbharathii" target="_blank">
+                            <img className="footerIcons" src={GithubIcon} alt="Icons" />
+                        </a>
+
+                        <a href="https://linkedin.com/in/kavinbharathii" target="_blank">
+                            <img className="footerIcons" src={LinkedinIcon} alt="Icons " />
+                        </a>
                     </div>
                 </div>
 
