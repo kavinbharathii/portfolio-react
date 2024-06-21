@@ -41,7 +41,7 @@ const ProjectCard = ({ nameProject, linkProject, tagProject, tagColor, content }
                 </h3>
                 <div className={`projectCardTitle text-cyan-500 ${tagColor}`}>{tagProject}</div>
             </div>
-            <a className="projectCardLink" href={linkProject} target="_blank" rel="noreferrer">{content}</a>
+            <div className="projectCardLink">{content}</div>
         </div>
     )
 }

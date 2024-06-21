@@ -103,8 +103,3 @@ const Projects = () => {
 }
 
 export default Projects
-
-
-// Wave function collapse algorithm for procedural generation
-// An industrial scale robot for handling machinery and tools
-// Using Genetic Algorithm for mdoel feature selection 
