@@ -8,6 +8,7 @@ const Projects = () => {
         "DEV": "tagYellow",
         "AI/ML": "tagBlue",
         "OPN SRC": "tagGreen",
+        "LANG": "tagPurple",
         "OTHERS": "tagStone"
     }
 
@@ -49,7 +50,7 @@ const Projects = () => {
     const mozhi = {
         name: "Mozhi",
         link: "https://github.com/kavinbharathii/mozhi",
-        tag: "DEV",
+        tag: "LANG",
         content: "An interpreted programming language built on Python"
     }
 
