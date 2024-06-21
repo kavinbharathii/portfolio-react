@@ -3,7 +3,8 @@ import Home from './pages/Home';
 import Maze from './pages/Maze';
 import Github from './pages/Github';
 import Skills from './pages/Skills';
-import Creativity from './pages/Creativity';
+// import Creativity from './pages/Creativity';
+import Projects from './pages/Projects';
 import Footer from './pages/Footer'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
 			<Github />
 			<Skills />
 			{/* <Creativity /> */}
+			<Projects />
 			<Footer />
 		</div>
 	)

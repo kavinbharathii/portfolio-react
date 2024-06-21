@@ -4,10 +4,10 @@ import Kavin from "./assets/kavindp.jpg"
 
 const Projects = () => {
     return (
-        <section className="fullScreen projectsPage">
+        <section className="fullScreen githubPage">
             <img className="mazeSpillImage" src={MazeSpill} />
 
-            <div className="projectsContent">
+            <div className="githubContent">
                 <div className="githubCard">
                     <div className="githubCardTop">
                         <img className="githubKavinImg" src={Kavin} />
@@ -22,7 +22,7 @@ const Projects = () => {
                 </div>
 
 
-                <div className="projectText">
+                <div className="githubText">
                     <p>A hectic</p>
                     <p>collection</p>
                     <p>of everything</p>

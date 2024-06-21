@@ -18,6 +18,7 @@ const Footer = () => {
                     <p className="footerTitle">// developed by</p>
                     <p className="footerDevName">Kavin Bharathi</p>
                     <p className="footerText">fullstack + AI&ML developer / designer / tryhard</p>
+                    <p className="footerEmail">r.m.kavinbharathi@gmail.com</p>
                     <div className="footerSocials">
                         <a href="https://github.com/kavinbharathii" target="_blank">
                             <img className="footerIcons" src={GithubIcon} alt="Icons" />
