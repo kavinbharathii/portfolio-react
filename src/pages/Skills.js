@@ -10,6 +10,7 @@ const Skills = () => {
 
     return (
         <section className="fullScreen skillsPage">
+            <div className='titleCursive'>Skills</div>
             <div className="skillsSkillBoxesContainer">
                 <SkillsBox startToken={"Languages(){"}    content={languages}         endToken={"}"}/>
                 <SkillsBox startToken={"<TechStacks"}       content={techStacks}        endToken={"/>"}/>

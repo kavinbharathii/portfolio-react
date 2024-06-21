@@ -1,6 +1,6 @@
 import './App.css';
 import Home from './pages/Home';
-import Maze from './pages/Maze';
+// import Maze from './pages/Maze';
 import Github from './pages/Github';
 import Skills from './pages/Skills';
 // import Creativity from './pages/Creativity';
@@ -11,10 +11,8 @@ function App() {
 	return (
 		<div className='dev'>
 			<Home />
-			<Maze />
 			<Github />
 			<Skills />
-			{/* <Creativity /> */}
 			<Projects />
 			<Footer />
 		</div>

@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Montserrat:wght@400;700;900&family=Silkscreen&display=swap');
+/* import script for the cursive font */
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+US+Trad:wght@100..400&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-family: 'Montserrat', sans-serif; */
     font-family: 'JetBrains Mono', monospace;
 }
 
@@ -54,6 +55,23 @@ body {
     height: 100vh;
 }
 
+.titleCursive {
+    font-family: 'Playwrite US Trad', cursive;
+    font-size: 3em;
+    font-optical-sizing: auto;
+    color: var(--slate-powder);
+}
+
+/* responsive design for titleCursive */
+@media screen and (max-width: 768px) {
+    .titleCursive {
+        font-size: 3em;
+        height: 20vh;
+    }
+}
+
+/* --------------------------------------- home page ---------------------------------------  */
+
 .homepage {
     display: flex;
     justify-content: space-evenly;
@@ -71,6 +89,7 @@ body {
     color: var(--white-primary);
     text-align: right;
     font-family: 'JetBrains Mono', monospace;
+    z-index: 10;
 }
 
 .homeKavinImg {
@@ -81,29 +100,38 @@ body {
     border-radius: 30px;
     box-shadow: 0px 0px 60px var(--slate-powder);
     transition: all 250ms ease-in-out;
+    z-index: 10;
+
 }
 
 .homeKavinImg:hover {
     box-shadow: 0px 0px 60px var(--slate-grey);
+    z-index: 10;
+
 }
 
 .homeHey {
     font-size: 0.2em;
     color: var(--slate-grey);
+    z-index: 10;
 }
 
 /* responsive design for homepage */
 @media screen and (max-width: 768px) {
     .homepage {
         flex-direction: column;
+        z-index: 10;
+
     }
 
     .homeText {
+        z-index: 10;
         text-align: center;
     }
 
     .homeKavinImg {
         width: 60vw;
+        z-index: 10;
     }
 }
 
@@ -245,7 +273,7 @@ body {
     z-index: 1;
 }
 
-.githubText > p {
+.githubText>p {
     font-size: 3.5em;
     color: var(--white-primary);
     font-weight: 600;
@@ -264,7 +292,8 @@ body {
         font-size: 0.8em;
     }
 
-    .githubUserName, .githubUserId {
+    .githubUserName,
+    .githubUserId {
         text-align: right;
     }
 
@@ -276,7 +305,7 @@ body {
         width: 100px;
     }
 
-    .githubText > p {
+    .githubText>p {
         font-size: 2em;
     }
 }
@@ -295,8 +324,8 @@ body {
 .skillsSkillBoxesContainer {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;   
-    
+    align-items: center;
+
     width: 100vw;
 }
 
@@ -339,14 +368,20 @@ body {
 
 /* skills page responsive design */
 @media screen and (max-width: 768px) {
+
+    .skillsPage {
+        height: auto;
+    }
+
     .skillsSkillBoxesContainer {
         flex-direction: column;
+        height: auto;
     }
 
     .skillsBox {
         width: 80vw;
         height: 20vh;
-        
+
         display: flex;
         justify-content: center;
         align-items: flex-start;
@@ -368,9 +403,10 @@ body {
         margin-left: 10%;
     }
 }
+
 .projectCard {
-    width: 30vw;
-    height: 30vh;
+    width: 28vw;
+    height: 25vh;
 
     background: var(--slate-black);
     color: var(--white-primary);
@@ -411,7 +447,7 @@ body {
 
 .tagYellow {
     color: var(--tag-yellow);
-}   
+}
 
 .tagBlue {
     color: var(--tag-blue);
@@ -431,18 +467,18 @@ body {
 
 .projectsPage {
     background-color: var(--black);
-    position: relative;    
+    position: relative;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .projectsContainer {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;       
+    align-items: center;
     width: 100vw;
     height: 100vh;
     flex-direction: column;
@@ -471,7 +507,7 @@ body {
     .projectCard {
         width: 80vw;
         height: 20vh;
-        
+
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
@@ -585,7 +621,7 @@ body {
     .footerPage {
         flex-direction: column;
     }
-    
+
     .footerContent {
         padding-left: 20px;
         width: 100vw;
@@ -601,7 +637,7 @@ body {
 
     .languageBox {
         width: 80vw;
-        
+
         display: flex;
         justify-content: center;
         align-items: flex-start;

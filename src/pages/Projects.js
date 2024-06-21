@@ -26,7 +26,7 @@ const Projects = () => {
     }
 
     const ga = {
-        name: "Genetic Algorithm for feature selection",
+        name: "Genetic Algorithm",
         link: "https://github.com/kavinbharathii/Feature_Selection_Using_GA",
         tag: "AI/ML",
         content: "Using Genetic Algorithm for optimal model feature selection"
@@ -76,6 +76,7 @@ const Projects = () => {
 
     return (
         <section className="fullScreen projectsPage">
+            <div className='titleCursive'>Projects</div>
             <div className="projectsContainer">
                 <div className="projectsRow">
                     <ProjectCard nameProject={wfc.name} linkProject={wfc.link} tagProject={wfc.tag} tagColor={tagColors[wfc.tag]} content={wfc.content}/>
