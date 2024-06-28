@@ -47,11 +47,11 @@ const Projects = () => {
         content: "Using NEAT algorithm for training a game environment"
     }
 
-    const mozhi = {
-        name: "Mozhi",
-        link: "https://github.com/kavinbharathii/mozhi",
+    const lox = {
+        name: "Lox",
+        link: "https://github.com/kavinbharathii/lox",
         tag: "LANG",
-        content: "An interpreted programming language built on Python"
+        content: "An interpreted programming language, built on Java"
     }
 
     const ciph = {
@@ -88,7 +88,7 @@ const Projects = () => {
                 <div className="projectsRow">
                     <ProjectCard nameProject={nerdtree.name} linkProject={nerdtree.link} tagProject={nerdtree.tag} tagColor={tagColors[nerdtree.tag]} content={nerdtree.content}/>
                     <ProjectCard nameProject={neat.name} linkProject={neat.link} tagProject={neat.tag} tagColor={tagColors[neat.tag]} content={neat.content}/>
-                    <ProjectCard nameProject={mozhi.name} linkProject={mozhi.link} tagProject={mozhi.tag} tagColor={tagColors[mozhi.tag]} content={mozhi.content}/>
+                    <ProjectCard nameProject={lox.name} linkProject={lox.link} tagProject={lox.tag} tagColor={tagColors[lox.tag]} content={lox.content}/>
                 </div>
 
                 <div className="projectsRow">
