@@ -54,11 +54,11 @@ const Projects = () => {
         content: "An interpreted programming language, built on Java"
     }
 
-    const ciph = {
-        name: "Ciph",
-        link: "https://github.com/kavinbharathii/ciph",
+    const promptopia = {
+        name: "Promptopia",
+        link: "https://github.com/kavinbharathii/promptopia",
         tag: "DEV",
-        content: "A project templating tool built for web developers"
+        content: "A platform for writing and sharing AI prompts built using Next.js"
     }
 
     const optimus = {
@@ -92,7 +92,7 @@ const Projects = () => {
                 </div>
 
                 <div className="projectsRow">
-                    <ProjectCard nameProject={ciph.name} linkProject={ciph.link} tagProject={ciph.tag} tagColor={tagColors[ciph.tag]} content={ciph.content}/>
+                    <ProjectCard nameProject={promptopia.name} linkProject={promptopia.link} tagProject={promptopia.tag} tagColor={tagColors[promptopia.tag]} content={promptopia.content}/>
                     <ProjectCard nameProject={optimus.name} linkProject={optimus.link} tagProject={optimus.tag} tagColor={tagColors[optimus.tag]} content={optimus.content}/>
                     <ProjectCard nameProject={devto.name} linkProject={devto.link} tagProject={devto.tag} tagColor={tagColors[devto.tag]} content={devto.content}/>
                 </div>
