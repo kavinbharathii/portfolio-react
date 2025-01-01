@@ -1,6 +1,6 @@
 
 import React from "react";
-import KavinHome from "./assets/KavinHome.png"
+import KavinHome from "./assets/KavinHome.jpeg"
 
 const Home = () => {
     return (
