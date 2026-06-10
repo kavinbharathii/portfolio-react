@@ -707,7 +707,7 @@ export default function KavinSite() {
 
           <div className="contact-cols">
             <div className="contact-block">
-              <span className="h">// languages</span><br />
+              <span className="h"># languages</span><br />
               <span className="kw">fluent</span> <span className="punc">{"{"}</span>
               <span className="item">English · Tamil</span>
               <span className="punc">{"}"}</span><br />
@@ -716,7 +716,7 @@ export default function KavinSite() {
               <span className="punc">{"}"}</span>
             </div>
             <div className="contact-block">
-              <span className="h">// passion</span><br />
+              <span className="h"># passion</span><br />
               <span className="dim">
                 Everything tech, inspired by creative ventures and innovative
                 ideas. Music, gaming, mysteries.
