@@ -588,7 +588,7 @@ export default function KavinSite() {
             <span className="caret" />
           </div>
           <h1>
-            Hey, I'm Kavin<br />Bharathi<span className="accent">_</span>
+            Kavin Bharathi<span className="accent">_</span>
           </h1>
           <p className="lede">
             Software engineer, designer, tryhard.<br />
@@ -609,7 +609,7 @@ export default function KavinSite() {
           <ul className="now-list">
             <li>
               <span className="bullet">▸</span>
-              <span>Taking apart things that work. Building things that barely do.</span>
+              <span>Taking apart things that work. Building things from scratch.</span>
             </li>
             <li>
               <span className="bullet">▸</span>
@@ -646,7 +646,7 @@ export default function KavinSite() {
             <div className="code-block">
               <span className="fn">tools</span> <span className="op">:=</span> <span className="typ">Tools</span><span className="punc">{"{"}</span>
               <span className="item">Docker · AWS · Postgres</span>
-              <span className="item">Figma · Firebase · Supabase</span>
+              <span className="item">Figma · DataDog · Supabase</span>
               <span className="item">NumPy · TensorFlow · DuckDB</span>
               <span className="punc">{"}"}</span>
             </div>
