@@ -172,7 +172,7 @@ function AsciiBackground() {
       }
 
       // ── the great ASCII wave (a kanagawa, of sorts) ──
-      ctx.font = "13px 'IBM Plex Mono', monospace";
+      ctx.font = "20px 'IBM Plex Mono', monospace";
       const bands = [
         { base: h - 46, amp: 9, freq: 0.045, speed: 1.0, ch: "~", color: C.blue, alpha: 0.16 },
         { base: h - 30, amp: 7, freq: 0.06, speed: -0.7, ch: "≈", color: C.aqua, alpha: 0.12 },
@@ -180,7 +180,7 @@ function AsciiBackground() {
       ];
       for (const b of bands) {
         ctx.fillStyle = b.color;
-        for (let x = 0; x < w; x += 14) {
+        for (let x = 0; x < w; x += 21) {
           const y = b.base + Math.sin(x * b.freq + t * b.speed) * b.amp;
           const crest = Math.sin(x * b.freq + t * b.speed) > 0.92;
           ctx.globalAlpha = crest ? b.alpha + 0.1 : b.alpha;
@@ -221,6 +221,16 @@ function useTyped(text, speed = 90, delay = 400) {
     return () => { clearTimeout(start); clearInterval(interval); };
   }, [text, speed, delay]);
   return out;
+}
+
+// ── KB_ icon mark ─────────────────────────────────────────────
+function LogoMark() {
+  return (
+    <a href="#intro" className="logo-mark" aria-label="Kavin Bharathi — back to top">
+      <span className="logo-kb">KB</span>
+      <span className="logo-cursor">_</span>
+    </a>
+  );
 }
 
 export default function KavinSite() {
@@ -271,12 +281,17 @@ export default function KavinSite() {
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
 
+        ::selection {
+          background: ${C.wave};
+          color: ${C.yellow};
+        }
+
         .site {
           background: ${C.bg};
           color: ${C.fg};
           font-family: 'IBM Plex Sans', system-ui, sans-serif;
-          font-size: 17px;
-          line-height: 1.65;
+          font-size: 19px;
+          line-height: 1.7;
           min-height: 100vh;
           padding-bottom: 64px;
           position: relative;
@@ -291,9 +306,9 @@ export default function KavinSite() {
         }
         .content { position: relative; z-index: 1; }
 
-        .wrap { max-width: 820px; margin: 0 auto; padding: 0 24px; }
+        .wrap { max-width: 960px; margin: 0 auto; padding: 0 32px; }
 
-        section { padding: 72px 0 24px; }
+        section { padding: 88px 0 28px; }
 
         .label {
           font-family: 'IBM Plex Mono', monospace;
@@ -307,12 +322,12 @@ export default function KavinSite() {
         .label .ic { color: ${C.comment}; margin-right: 6px; }
 
         /* hero */
-        .hero { padding-top: 18vh; padding-bottom: 48px; }
+        .hero { padding-top: 22vh; padding-bottom: 56px; }
         .prompt {
           font-family: 'IBM Plex Mono', monospace;
-          font-size: 14px;
+          font-size: 15px;
           color: ${C.green};
-          margin-bottom: 18px;
+          margin-bottom: 20px;
           min-height: 21px;
         }
         .prompt .path { color: ${C.blue}; }
@@ -337,15 +352,15 @@ export default function KavinSite() {
         @keyframes rise { from { opacity: 0; transform: translateY(18px) } to { opacity: 1; transform: none } }
 
         .lede {
-          font-size: 19px; color: ${C.fg}; max-width: 56ch;
+          font-size: 21px; color: ${C.fg}; max-width: 56ch;
           animation: rise 700ms 120ms cubic-bezier(.2,.7,.2,1) both;
         }
         .lede em { color: ${C.yellow}; font-style: normal; }
         .lede .q { color: ${C.violet}; }
         .sub {
-          margin-top: 16px;
+          margin-top: 18px;
           font-family: 'IBM Plex Mono', monospace;
-          font-size: 13.5px;
+          font-size: 15px;
           color: ${C.muted};
           animation: rise 700ms 220ms cubic-bezier(.2,.7,.2,1) both;
         }
@@ -355,9 +370,9 @@ export default function KavinSite() {
         h2 {
           font-family: 'Bricolage Grotesque', sans-serif;
           font-weight: 600;
-          font-size: 26px;
+          font-size: 30px;
           letter-spacing: -0.01em;
-          margin-bottom: 18px;
+          margin-bottom: 20px;
         }
         h2 .hx { color: ${C.comment}; font-family: 'IBM Plex Mono', monospace; font-size: 18px; margin-right: 10px; }
         .body { color: ${C.fg}; max-width: 62ch; }
@@ -485,6 +500,37 @@ export default function KavinSite() {
           color: ${C.comment};
         }
 
+        /* logo mark */
+        .logo-mark {
+          position: fixed;
+          top: 20px;
+          left: 24px;
+          z-index: 60;
+          text-decoration: none;
+          display: flex;
+          align-items: baseline;
+          gap: 1px;
+          user-select: none;
+        }
+        .logo-kb {
+          font-family: 'Bricolage Grotesque', sans-serif;
+          font-weight: 800;
+          font-size: 22px;
+          letter-spacing: -0.03em;
+          color: ${C.fg};
+          line-height: 1;
+          transition: color 150ms ease;
+        }
+        .logo-cursor {
+          font-family: 'Bricolage Grotesque', sans-serif;
+          font-weight: 800;
+          font-size: 22px;
+          color: ${C.blue};
+          animation: blink 1.4s steps(1) infinite;
+          line-height: 1;
+        }
+        .logo-mark:hover .logo-kb { color: ${C.blue}; }
+
         /* statusline */
         .statusline {
           position: fixed;
@@ -530,6 +576,7 @@ export default function KavinSite() {
         }
       `}</style>
 
+      <LogoMark />
       <AsciiBackground />
 
       <div className="content">
@@ -541,7 +588,7 @@ export default function KavinSite() {
             <span className="caret" />
           </div>
           <h1>
-            Kavin Bharathi<span className="accent">_</span>
+            Hey, I'm Kavin<br />Bharathi<span className="accent">_</span>
           </h1>
           <p className="lede">
             Software engineer, designer, tryhard.<br />
@@ -562,7 +609,7 @@ export default function KavinSite() {
           <ul className="now-list">
             <li>
               <span className="bullet">▸</span>
-              <span>Taking apart things that work. Building things from scratch.</span>
+              <span>Taking apart things that work. Building things that barely do.</span>
             </li>
             <li>
               <span className="bullet">▸</span>
@@ -591,7 +638,7 @@ export default function KavinSite() {
               <span className="punc">{"}"}</span>
             </div>
             <div className="code-block">
-              <span className="punc">&lt;</span><span className="tagname">Tech</span>
+              <span className="punc">&lt;</span><span className="tagname">TechStacks</span>
               <span className="item">Django · Next.js · React</span>
               <span className="item">Node.js · Express · Celery</span>
               <span className="punc">/&gt;</span>
